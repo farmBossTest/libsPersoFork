@@ -15,9 +15,10 @@ version en recursif de l'algorithme minimax (c'est incroyablement plus simples a
 - evaluate : fonction qui renvoie la valeur d'un plateau (plus la valeur est grande meilleur est le plateau)
 - dest : adresse de la zone memoire ou stocker le meilleur plateau
 ## valeur de retour
-renvoie 
+choseBestMove renvoie 
 - SUCCESS (0) en cas de succes
 - ERROR_nextBoardPointerIsNULL (-1) si la fonction nextBoard passé en arguement correspond au pointeur NULL
 - ERROR_evaluatePointerIsNULL (-2) si la fonction evaluate passé en arguement correspond au pointeur NULL
 - ERROR_targetDephtIsNegative (-3) si la valeur de targetDepth est negative ou nulle
 - ERROR_noNextMove (-4) si nextBoard renvoie un tableau de 0 elements
+
