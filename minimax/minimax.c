@@ -12,7 +12,7 @@ static int choseBestMove_aux( // explore recursivement les coups jusqu'à la pro
 
     int nbNextBoards;
     board_t *nextBoards = nextBoard(startBoard, &nbNextBoards);
-    if (nbNextBoards == 0 || nextBoards == NULL) {free(nextBoards); return evaluate (startBoard);}
+    if (nbNextBoards <= 0 || nextBoards == NULL) {free(nextBoards); return evaluate (startBoard);}
 
     int extremScore = choseBestMove_aux(nextBoards[0], currentDepth + 1, targetDepth, nextBoard, evaluate);
     int currentScore;
@@ -44,7 +44,7 @@ int choseBestMove(
 
     int nbNextBoards;
     board_t * nextBoards = nextBoard(startBoard, nbNextBoards);
-    if (nbNextBoards == 0 || nextBoards == NULL) {free(nextBoards); return ERROR_noNextMove;}
+    if (nbNextBoards <= 0 || nextBoards == NULL) {free(nextBoards); return ERROR_noNextMove;}
     
     int bestScore = choseBestMove_aux(nextBoards[0], 1, targetDepth, nextBoard, evaluate);
     int bestIndex = 0;
@@ -60,3 +60,4 @@ int choseBestMove(
     free(nextBoards);
     return SUCCESS;
 }
+
