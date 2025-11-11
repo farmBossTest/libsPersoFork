@@ -57,6 +57,7 @@ vertex_t *makeTree(
 static int procreation/*createChildrens*/(vertex_t *parent, board_t *(*nextBoard)(board_t, int *)){
     int size; 
     board_t *childrenBoards = nextBoard(parent->board, &size);
+    if (childrenBoards == NULL) return 0;               // interprete le fait que nextBoard n'ai pas crée de tableau des coups valide comme le fait qu'il n'y a pas de coups valide, donc 0 enfants
     vertex_t *child = NULL;
     for(int i=0; i<size; i++){
         if( (child = malloc(sizeof(vertex_t))) == NULL){

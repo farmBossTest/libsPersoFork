@@ -41,10 +41,11 @@ int choseBestMove(
     if (nextBoard == NULL) return ERROR_nextBoardPointerIsNULL;
     if (evaluate == NULL) return ERROR_evaluatePointerIsNULL;
     if (targetDepth <= 0) return ERROR_targetDephtIsNegative;
+    if (dest == NULL) return ERROR_destPointeurIsNULL;
 
     int nbNextBoards;
     board_t * nextBoards = nextBoard(startBoard, nbNextBoards);
-    if (nbNextBoards <= 0 || nextBoards == NULL) {free(nextBoards); return ERROR_noNextMove;}
+    if (nbNextBoards == 0 || nextBoards == NULL) {free(nextBoards); return ERROR_noNextMove;}
     
     int bestScore = choseBestMove_aux(nextBoards[0], 1, targetDepth, nextBoard, evaluate);
     int bestIndex = 0;
@@ -60,4 +61,3 @@ int choseBestMove(
     free(nextBoards);
     return SUCCESS;
 }
-
