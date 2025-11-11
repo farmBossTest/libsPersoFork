@@ -44,8 +44,8 @@ int choseBestMove(
     if (dest == NULL) return ERROR_destPointeurIsNULL;
 
     int nbNextBoards;
-    board_t * nextBoards = nextBoard(startBoard, nbNextBoards);
-    if (nbNextBoards == 0 || nextBoards == NULL) {free(nextBoards); return ERROR_noNextMove;}
+    board_t * nextBoards = nextBoard(startBoard, &nbNextBoards);
+    if (nbNextBoards <= 0 || nextBoards == NULL) {free(nextBoards); return ERROR_noNextMove;}
     
     int bestScore = choseBestMove_aux(nextBoards[0], 1, targetDepth, nextBoard, evaluate);
     int bestIndex = 0;
@@ -61,3 +61,4 @@ int choseBestMove(
     free(nextBoards);
     return SUCCESS;
 }
+
