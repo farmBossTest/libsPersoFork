@@ -21,4 +21,5 @@ choseBestMove renvoie
 - ERROR_evaluatePointerIsNULL (-2) si la fonction evaluate passé en arguement correspond au pointeur NULL
 - ERROR_targetDephtIsNegative (-3) si la valeur de targetDepth est negative ou nulle
 - ERROR_noNextMove (-4) si nextBoard renvoie un tableau de 0 elements
+- ERROR_destPointeurIsNULL (-5) si le pointeur de retour correspond au pointeur NULL
 

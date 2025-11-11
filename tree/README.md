@@ -2,7 +2,7 @@ ensemble de fonctions pour permettre de faire du minimax sur un jeu.
 
 # dependences:
 - ma lib pour les listes chainées (node.h)
-- - un main.h définissant entre autre le type board_t. ce type doit correspondre a ce qui est utiliser pour stocker l'état du jeu
+- un main.h définissant entre autre le type board_t. ce type doit correspondre a ce qui est utiliser pour stocker l'état du jeu /!\ le type board doit etre stockable par simple affectation (=)   /!\
 
 # fonctions:
 - vertex_t *makeTree(

@@ -9,6 +9,7 @@
 #define ERROR_evaluatePointerIsNULL -2
 #define ERROR_targetDephtIsNegative -3
 #define ERROR_noNextMove -4 
+#define ERROR_destPointeurIsNULL -5
 
 int choseBestMove(                                      // calcule le meilleur coups a joué dans la position donné par startBoard selon l'algorithme minimax
     board_t startBoard,                                 // plateau a partir du quel minimax ser a appliqué
