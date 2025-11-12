@@ -61,4 +61,3 @@ int choseBestMove(
     free(nextBoards);
     return SUCCESS;
 }
-
