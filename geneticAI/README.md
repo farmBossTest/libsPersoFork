@@ -5,8 +5,8 @@ ma lib pour les reseau de neurones (network.h)
 
 # fonctions:
 - int tournament(generation_t gen, float (*match)(neuralNetwork_t, neuralNetwork_t))
-- int concours (generation_t gen, float (*match)(neuralNetwork_t));
-- int averageEntities(entity_t dest, entity_t src1, entity_t src2);  
+- int concours (generation_t gen, float (*match)(neuralNetwork_t))
+- int averageEntities(entity_t dest, entity_t src1, entity_t src2)  
 # detail:
 - tournament : evalue chaque entitée de gen en la faisant afronter toute les autre via match, puis reorganise la generation par score croissant. <br>
 note : match doit renvoier une valeur d'autant plus grande que la performance du premier reseau passé en argument est bonne
