@@ -2,10 +2,6 @@
 #define GENETICAI
 //#include "neuralNetwork.h"
 
-#define weightMutationUpperBound 1.0
-#define weightMutationLowerBound -1.0
-#define mutationProbaUpperBound 1000000
-#define mutationProbaLowerBound 0
 
 #define success 1
 #define ERROR_emptyGeneration -203
