@@ -17,7 +17,7 @@ note : match doit renvoier une valeur d'autant plus grande que la performance du
         success (1) en cas de succes
         ERROR_emptyGeneration (-203) si le poiteur sur les membres de gen (gen.membres) est le pointeur NULL
         ERROR_generationSizeIsNegative (-204) le le champs sizes de gen (gen.sizes) a une valeur negative ou nulle
-- coucours :// evalue chaque entitée de gen via evaluate, puis reorganise la generation par score croissant. 
+- concours :// evalue chaque entitée de gen via evaluate, puis reorganise la generation par score croissant. 
 note : evaluate doit renvoyer une valeur d'autant plus elevée que la performance du reseau passé en argument est bonne
     ## Parametres: 
         gen : generation dont les entitées vont etre classé
