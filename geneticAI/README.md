@@ -8,7 +8,7 @@ ma lib pour les reseau de neurones (network.h)
 - int concours (generation_t gen, float (*match)(neuralNetwork_t));
 - int averageEntities(entity_t dest, entity_t src1, entity_t src2);  
 # detail:
-- tournament : evalue chaque entitée de gen en la faisant afronter toute les autre via match, puis reorganise la generation par score croissant. 
+- tournament : evalue chaque entitée de gen en la faisant afronter toute les autre via match, puis reorganise la generation par score croissant. <br>
 note : match doit renvoier une valeur d'autant plus grande que la performance du premier reseau passé en argument est bonne
     ## Parametres: 
         gen : generation dont les entitées vont etre classé
@@ -17,7 +17,7 @@ note : match doit renvoier une valeur d'autant plus grande que la performance du
         success (1) en cas de succes
         ERROR_emptyGeneration (-203) si le poiteur sur les membres de gen (gen.membres) est le pointeur NULL
         ERROR_generationSizeIsNegative (-204) le le champs sizes de gen (gen.sizes) a une valeur negative ou nulle
-- concours :// evalue chaque entitée de gen via evaluate, puis reorganise la generation par score croissant. 
+- concours : evalue chaque entitée de gen via evaluate, puis reorganise la generation par score croissant. <br>
 note : evaluate doit renvoyer une valeur d'autant plus elevée que la performance du reseau passé en argument est bonne
     ## Parametres: 
         gen : generation dont les entitées vont etre classé
@@ -26,7 +26,7 @@ note : evaluate doit renvoyer une valeur d'autant plus elevée que la performanc
         success (1) en cas de succes
         ERROR_emptyGeneration (-203) si le poiteur sur les membres de gen (gen.membres) est le pointeur NULL
         ERROR_generationSizeIsNegative (-204) le le champs sizes de gen (gen.sizes) a une valeur negative ou nulle
-- averageEntities : met chaque poids et bias du reseau de neurones de dest a la moyennes du poid ou bias corespondant de src1 et du  poid ou bias corespondant de src2. 
+- averageEntities : met chaque poids et bias du reseau de neurones de dest a la moyennes du poid ou bias corespondant de src1 et du  poid ou bias corespondant de src2. <br>
 note : les reseau de neurone de dest, src1 et src2 doivent avoir la meme taille
     ## Parametres: 
         dest : entité (entity_t) a modifer
