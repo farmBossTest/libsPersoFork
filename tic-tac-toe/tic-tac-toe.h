@@ -14,19 +14,22 @@
 
 #define ERROR_positionAlreadyFilled -1
 #define ERROR_positionOutOfBounds -2
+#define ERROR_playerPointerIsNULL -3
 
 
 
 typedef char board_t[LENLINE*LENROW];
 
+int switchPlayer(char *player);
+
 int updateBoard(board_t board, int pos, char player);
 
 void showBoard(board_t board);
 
-void initBoard(board_t board);
+void initBoard(board_t board);      // set all the values of board to constant "nobody"
 
-char whoWins(board_t board);      // returns constant "P1" if player 1 has won, constant "P2" if player 2 did and constant "nobody" if none has won
+char whoWins(board_t board);        // returns constant "P1" if player 1 has won, constant "P2" if player 2 did and constant "nobody" if none has won
 
-int convertPos(int x, int y);   // returns a position in the board array based on a position in x,y
+int convertPos(int x, int y);       // returns a position in the board array based on a position in x,y
 
 #endif

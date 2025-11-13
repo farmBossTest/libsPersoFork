@@ -5,6 +5,10 @@ static int min(int a, int b){
     if (a < b) return a;
     return b;
 }
+int switchPlayer(char *player){
+    if (player == NULL) return ERROR_playerPointerIsNULL
+    return player==P1?P2:P1;
+}
 
 int convertPos(int x, int y){
     return(x + (LENLINE * y));
@@ -33,7 +37,7 @@ char whoWins(board_t board){
     if (nbRounds < (2 * min(LENLINE, LENROW) - 1) ) return nobody;         // si il n'y a pas eu assez de round pour avoir un vainqueur
     
 
-    for (int y = 0; y<NBROW; y++){                      // verivicvation des lignes
+    for (int y = 0; y<NBROW; y++){                      // verification des lignes
         for (int x = 0; x < NBLINE; x++){
             sum += board[convertPos(x, y)];
         }
