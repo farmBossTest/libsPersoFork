@@ -1,7 +1,7 @@
-ensemble de fonctions pour permettre d'utiliser des listes chainnées
+ensemble de fonctions pour faire un jeu de morpion
 
 # dependences:
-ma lib pour les reseau de neurones (network.h)
+aucune
 
 # fonctions:
 - int switchPlayer(char *player)
