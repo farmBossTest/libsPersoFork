@@ -1,4 +1,4 @@
-ensemble de fonctions pour permettre d'utiliser des listes chainnées
+ensemble de fonctions pour entrainer des IA par "selection naturelle"
 
 # dependences:
 ma lib pour les reseau de neurones (network.h)
