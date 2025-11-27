@@ -1,5 +1,5 @@
 # libsPerso
-Regroupe les libs que j'ai crée pour mes differents projets.
+Regroupe les libs que j'ai crée pour mes differents projets.<br>
 Vous etez libre de les reutiliser comme bon vous semble <br>
 
 chaque dossier possède un README qui detail le fonctionnement des fonctions qui y sont rangés. <br>
