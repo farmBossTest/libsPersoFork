@@ -1,6 +1,7 @@
 version en recursif de l'algorithme minimax (c'est incroyablement plus simples a faire)
 # dependances
-- main.h        : definie un type board_t pour contenir les plateaux de jeu      /!\ ce type doit etre copiable par simple affectation(=) /!\ 
+- main.h        : definie un type board_t pour contenir les plateaux de jeu      /!\ ce type doit etre copiable par simple affectation(=) /!\ <br>
+note : ce type peut etre renomé en modifiant la constante MINIMAXBOARDTYPE dans minimax.h
 
 # fonctions
  - int choseBestMove(board_t startBoard, int targetDepth, board_t *(*nextBoard)(board_t board, int *size), int(*evaluate)(board_t board), board_t *dest                                       

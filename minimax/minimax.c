@@ -2,16 +2,16 @@
 #include <stdlib.h>
 
 static int choseBestMove_aux( // explore recursivement les coups jusqu'à la profondeur cible
-    board_t startBoard,
+    MINIMAXBOARDTYPE startBoard,
     int currentDepth,
     int targetDepth,
-    board_t *(*nextBoard)(board_t board, int *size),
-    int(*evaluate)(board_t board)
+    MINIMAXBOARDTYPE *(*nextBoard)(MINIMAXBOARDTYPE board, int *size),
+    int(*evaluate)(MINIMAXBOARDTYPE board)
 ){
     if (currentDepth == targetDepth) return evaluate(startBoard);
 
     int nbNextBoards;
-    board_t *nextBoards = nextBoard(startBoard, &nbNextBoards);
+    MINIMAXBOARDTYPE *nextBoards = nextBoard(startBoard, &nbNextBoards);
     if (nbNextBoards <= 0 || nextBoards == NULL) {free(nextBoards); return evaluate (startBoard);}
 
     int extremScore = choseBestMove_aux(nextBoards[0], currentDepth + 1, targetDepth, nextBoard, evaluate);
@@ -32,11 +32,11 @@ static int choseBestMove_aux( // explore recursivement les coups jusqu'à la pro
 }
 
 int choseBestMove(
-    board_t startBoard,
+    MINIMAXBOARDTYPE startBoard,
     int targetDepth,
-    board_t *(*nextBoard)(board_t board, int *size),
-    int(*evaluate)(board_t board),
-    board_t *dest
+    MINIMAXBOARDTYPE *(*nextBoard)(MINIMAXBOARDTYPE board, int *size),
+    int(*evaluate)(MINIMAXBOARDTYPE board),
+    MINIMAXBOARDTYPE *dest
 ){
     if (nextBoard == NULL) return ERROR_nextBoardPointerIsNULL;
     if (evaluate == NULL) return ERROR_evaluatePointerIsNULL;
@@ -44,7 +44,7 @@ int choseBestMove(
     if (dest == NULL) return ERROR_destPointeurIsNULL;
 
     int nbNextBoards;
-    board_t * nextBoards = nextBoard(startBoard, &nbNextBoards);
+    MINIMAXBOARDTYPE * nextBoards = nextBoard(startBoard, &nbNextBoards);
     if (nbNextBoards <= 0 || nextBoards == NULL) {free(nextBoards); return ERROR_noNextMove;}
     
     int bestScore = choseBestMove_aux(nextBoards[0], 1, targetDepth, nextBoard, evaluate);
